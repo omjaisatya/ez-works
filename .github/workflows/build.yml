@@ -38,9 +38,12 @@ jobs:
       - name: Install dependencies
         run: npm ci
       - name: Build
-        run: npm run build
+        run: npm run build -- --base='/ez-works/'
       - name: Setup Pages
         uses: actions/configure-pages@v4
+        with:
+          # Explicitly set static site generator
+          static_site_generator: vite
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:

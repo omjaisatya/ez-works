@@ -75,8 +75,8 @@ body {
 .service-icon {
   display: flex;
   align-items: center;
-  justify-content: center;
   gap: 8px;
+  justify-content: space-around;
 }
 
 .service-icon span {
